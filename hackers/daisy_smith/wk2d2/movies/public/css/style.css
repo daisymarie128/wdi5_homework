@@ -1,0 +1,31 @@
+body {
+  background-color: #fff;
+}
+
+h1 {
+    font-family: Helvetica;
+    font-style: bold;
+  font-size: 3em;
+  color: #000;
+}
+
+p {
+  font-family: Helvetica;
+  font-size: 1em;
+  color: #000;
+}
+
+#container {
+  width: 30%;
+  padding: 5% 5% 5% 30%;
+}
+
+nav a{
+  color: #000;
+}
+
+#title p{
+  font-family: Helvetica;
+  font-size: 2em;
+  color: #000;
+}
