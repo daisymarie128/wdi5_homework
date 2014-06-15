@@ -1,0 +1,38 @@
+
+<form action="/results" method="get">
+
+  <label for="line1">What line are you on?
+    <select name="line1">
+      <% "n l six".split.each do |line1| %>
+        <option value="<%= line1.capitalize %>"><%= line1.capitalize %></option>
+      <% end %>
+    </select>
+  </label>
+
+
+  <label for="station1">What Station are you at?
+      <select name="station1">
+        <% "Times_Square 34th 28th N23rd Union_Square N8th L8th 6th 3rd 1st Grand_Central 33rd six28th six23rd Astor Place".split.each do |station1| %>
+          <option value="<%= station1.capitalize %>"><%= station1.capitalize.to_s %></option>
+        <% end %>
+      </select>
+    </label>
+
+  <label for="line2">What line is your destination on?
+    <select name="line2">
+      <% "n l six".split.each do |line2| %>
+        <option value="<%= line2.capitalize %>"><%= line2.capitalize %></option>
+      <% end %>
+    </select>
+  </label>
+
+  <label for="station2">What Station are you going to?
+      <select name="station2">
+        <% "Times_Square 34th 28th N23rd Union_Square N8th L8th 6th 3rd 1st Grand_Central 33rd six28th six23rd Astor Place".split.each do |station2| %>
+          <option value="<%= station2.capitalize %>"><%= station2.capitalize %></option>
+        <% end %>
+      </select>
+  </label>
+
+  <button type="submit">Submit that shit</button>
+</form>

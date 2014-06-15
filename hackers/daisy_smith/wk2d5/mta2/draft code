@@ -1,0 +1,240 @@
+<form action="/results" method="get">
+
+<label for="line1">What line are you on?
+    <select name="line1">
+      <% "n l six".split.each do |line1| %>
+        <option value="<%= line1.capitalize %>"><%= line1.capitalize %></option>
+      <% end %>
+    </select>
+  </label>
+
+<label for="station1">What Station are you at?
+    <select name="station1">
+      <% "Times_Square 34th 28th N23rd Union_Square N8th L8th 6th 3rd 1st Grand_Central 33rd six28th six23rd Astor Place".split.each do |station1| %>
+        <option value="<%= station1.capitalize %>"><%= station1.capitalize %></option>
+      <% end %>
+    </select>
+  </label>
+
+<label for="line2">What Station are you going to?
+    <select name="line2">
+      <% "n l six".split.each do |line2| %>
+        <option value="<%= line2.capitalize %>"><%= line2.capitalize %></option>
+      <% end %>
+    </select>
+  </label>
+
+
+<label for="station2">What Station are you going to?
+    <select name="station2">
+      <% "Times_Square 34th 28th N23rd Union_Square N8th L8th 6th 3rd 1st Grand_Central 33rd six28th six23rd Astor Place".split.each do |station2| %>
+        <option value="<%= station2.capitalize %>"><%= station2.capitalize %></option>
+      <% end %>
+    </select>
+  </label>
+
+
+  <button type="submit">Submit that shit</button>
+</form>
+
+////////////////////////////////////////
+get '/' do
+  erb :home
+end
+
+
+
+get '/station' do
+  params.inspect
+  erb :results
+
+  lines = {
+  :n => {'Times Square' => 1, '34th' => 2, '28th' => 3, '23rd' => 4, 'Union Square' => 5, '8th' => 6},
+  :l => {'8th' => 3, '6th' => 4, 'Union Square' => 5, '3rd' => 6, '1st' => 7},
+  :six => {'Grand Central' => 1, '33rd' => 2, '28th' => 3, '23rd' => 4, 'Union Square' => 5, 'Astor Place' => 6}
+}
+
+# line1 =
+
+    s1 = params[:@line1.to_sym][:station1]
+    s2 = lines[line2][station2]
+    list = lines[line1][station1]..lines[line2][station2]
+
+
+
+
+
+
+
+
+     station = $lines[params[:line1.to_sym]][[params[:station1]]
+# station2 = $lines[params[:line2.to_sym]][[params[:station2]]
+
+# stops = station2 - station
+# if stops < 0
+#   stops = stops + station
+#   p "There are #{stops} stops between #{params[:station1]} and #{params[:station2]}"
+# else
+# p "There are #{params[:station1]} stops between #{params[:station2]} and #{destination}"
+# end
+
+=================================================================
+
+
+
+require 'pry'
+require 'sinatra'
+require 'sinatra/reloader'
+
+  $lines = {
+  :n => {'Times Square' => 1, '34th' => 2, '28th' => 3, '23rd' => 4, 'Union Square' => 5, '8th' => 6},
+  :l => {'8th' => 3, '6th' => 4, 'Union Square' => 5, '3rd' => 6, '1st' => 7},
+  :six => {'Grand Central' => 1, '33rd' => 2, '28th' => 3, '23rd' => 4, 'Union Square' => 5, 'Astor Place' => 6}
+}
+
+get '/form' do
+erb :form
+end
+
+get '/results' do
+
+  # stations = [["blank", "Times Square", "34th", "28th", "N23rd", "Union Square", "N8th"],["blank", "blank", "blank", "L8th", "6th", "Union Square", "3rd", "1st"], ["blank", "Grand Central", "33rd", "six28th", "six23rd", "Union Square", "Astor Place"]]
+  # math = stations.index('#{params[:station1]}')
+erb :results
+
+
+# n = [blank, Times Square, 34th, 28th, N23rd, Union Square, N8th]
+# l = [blank, blank, blank, L8th, 6th, Union Square, 3rd, 1st]
+# six = [blank, Grand Central, 33rd, six28th, six23rd, Union Square, Astor Place]
+params[:station1]
+# stations = [["blank", "Times Square", "34th", "28th", "N23rd", "Union Square", "N8th"],["blank", "blank", "blank", "L8th", "6th", "Union Square", "3rd", "1st"], ["blank", "Grand Central", "33rd", "six28th", "six23rd", "Union Square", "Astor Place"]]
+  # result = stations[1].index("#{params[:station1]}")
+ "hello #{ $lines.index("#{params[:station1]}") } #{params[:station1]}"
+ # params[:station1]
+end
+
+
+# line1 =
+
+    # s1 = params.lines[:line1.to_sym][:station1]
+    # s2 = lines[line2][station2]
+    # list = lines[line1][station1]..lines[line2][station2]
+
+
+    # stops = station2 - station
+    # if stops < 0
+    #   stops = stops + station
+    #   p "There are #{stops} stops between #{current_location} and #{destination} #{list}"
+    # else
+    # p "There are #{stops} stops between #{current_location} and #{destination}"
+
+
+
+# class Stations
+#   def initialize(name)
+#     @name = name
+#     @db ={}
+#   end
+
+#   def db
+#     @db
+#   end
+
+#   def add(name, value)
+#     @db[value] ||= []
+#     @db[value] << name
+#   end
+
+# end
+#       stations = Stations.new('mta')
+#       stations.add("Times Square", 1)
+#       stations.add("34th", 2)
+#       stations.add("N28th", 3)
+#       stations.add("N23rd", 4)
+#       stations.add("Union Square", 5)
+#       stations.add("N8th", 6)
+
+#       stations.add("L8th", 3)
+#       stations.add("6th", 4)
+#       stations.add("3rd", 6)
+#       stations.add("1st", 7)
+
+#       stations.add("Grand Central", 1)
+#       stations.add("33rd", 2)
+#       stations.add("six28th", 3)
+#       stations.add("six23rd", 4)
+#       stations.add("Astor Place", 6)
+
+
+
+
+
+
+
+
+# p "Are you on n, l or six?"
+#   line1 = gets.chomp
+# p "What Station are you at?"
+#   current_location = gets.chomp
+# p "Is your destination on n, l or six?"
+#   line2 = gets.chomp
+# p "What Station are you going to?"
+#   destination = gets.chomp
+
+# station = lines[line1.to_sym][current_location]
+# station2 = lines[line2.to_sym][destination]
+# list = lines[line1.to_sym][current_location]..lines[line2.to_sym][destination]
+
+
+# stops = station2 - station
+# if stops < 0
+#   stops = stops + station
+#   p "There are #{stops} stops between #{current_location} and #{destination} #{list}"
+# else
+# p "There are #{stops} stops between #{current_location} and #{destination}"
+
+
+
+
+
+
+# <label for="station1">What Station are you at?
+#     <select name="station1">
+#       <% "Times_Square 34th 28th N23rd Union_Square N8th L8th 6th 3rd 1st Grand_Central 33rd six28th six23rd Astor Place".split.each do |brother| %>
+#         <option value="<%= station1.capitalize %>"><%= station1.capitalize %></option>
+#       <% end %>
+#     </select>
+#   </label>
+# </form>
+
+
+===========
+
+params[:station1]
+# stations = [["blank", "Times Square", "34th", "28th", "N23rd", "Union Square", "N8th"],["blank", "blank", "blank", "L8th", "6th", "Union Square", "3rd", "1st"], ["blank", "Grand Central", "33rd", "six28th", "six23rd", "Union Square", "Astor Place"]]
+  # result = stations[1].index("#{params[:station1]}")
+ "hello #{ result } "
+ # params[:station1]
+end
+
+===============================================================
+
+n = ["blank", "Times Square", "34th", "28th", "N23rd", "Union Square", "N8th"]
+l = ["blank", "blank", "blank", "L8th", "6th", "Union Square", "3rd", "1st"]
+six = ["blank", "Grand Central", "33rd", "six28th", "six23rd", "Union Square", "Astor Place"]
+
+line1_choice = params[:line1]
+line2_choice = params[:line2]
+
+station1_choice = params[:station1]
+station2_choice = params[:station2]
+
+value1 = line1_choice.index('#{station1_choice}')
+value2 = line2_choice.index('#{station2_choice}')
+
+result = value1 - value2
+
+
+params[:station1]
+
+"There are #{ result } stops on the way"

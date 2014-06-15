@@ -1,9 +1,18 @@
+<div class="imageholder">
+  <img src="<%= @movie['Poster'] %>">
+</div><!--////////close imageholder /////////////-->
+
 <div id='title'>
-<p>
-  <%= @title %>
-</p>
+  <h2>
+    <%= @movie['Title'] %>
+  </h2>
 </div><!--////////close title /////////////-->
-<p>
-<em><%= @movie['Year'] %><%= @movie['Actors'] %><%= @movie['Plot'] %></em>
-<div><img src="<%= @movie['Poster'] %>"></div>
-</p>
+
+<div class="info">
+  <p><em><%= @movie['Year'] %><%= @movie['Actors'] %><%= @movie['Plot'] %></em></p>
+
+</div><!--////////////////// close info /////////////-->
+
+
+
+</div><!--////////close searchinfo /////////////-->

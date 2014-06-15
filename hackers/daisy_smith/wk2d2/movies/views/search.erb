@@ -1,0 +1,13 @@
+<div id='list'>
+<p>
+  Results for : <%= @search %>
+</p>
+</div><!--////////close title /////////////-->
+<p>
+<% @movie["Search"].each do |movie| %>
+  <a href="/movie?title=<%= movie["Title"] %>"><h2><%= movie["Title"] %></h2></a>
+<% end %>
+</p>
+
+<!-- # http://localhost:4567/search?search=jaws -->
+<!--
