@@ -1,0 +1,44 @@
+.thumb{
+  max-width: 20em;
+}
+
+.medium{
+  max-width: 30em;
+}
+
+.works{
+  max-width: 30em;
+  display: inline-block;
+}
+
+.works img{
+  width: 30em;
+}
+
+ul li{
+  list-style: none;
+}
+
+nav ul{
+  list-style: none;
+  background-color: #FF4000;
+  padding-top: 3%;
+  padding-bottom: 1%;
+}
+
+
+nav li{
+  display: inline-block;
+  padding-right: 2%;
+}
+
+nav a{
+  color: #fff;
+  text-decoration: none;
+}
+
+label{
+  min-width: 80px;
+  display: inline-block;
+  text-align: right;
+}

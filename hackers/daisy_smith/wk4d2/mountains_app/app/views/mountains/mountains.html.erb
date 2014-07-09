@@ -1,0 +1,11 @@
+<div id="results">
+
+<% @mountains.each do |mountain| %>
+  <div class="mountain">
+    <%= image_tag( mountain.image, :class => 'thumb' ) if mountain.image %><br>
+    <%= link_to(mountain.name, mountain_path(mountain.id)) %>
+    <%= button_to('Delete', mountain_delete_path(mountain.id), :class => 'buttond') %>
+  </p>
+</div>
+<% end %>
+</div><!--/////////close results//////-->

@@ -1,0 +1,22 @@
+body{
+  background-color: purple;
+  color: white;
+}
+
+#container{
+  max-width: 960px;
+  margin: auto;
+}
+
+nav li{
+  display: inline-block;
+  list-style: none;
+}
+
+a{
+  color: #fff;
+}
+
+.butterfly img{
+  max-width: 10em;
+}

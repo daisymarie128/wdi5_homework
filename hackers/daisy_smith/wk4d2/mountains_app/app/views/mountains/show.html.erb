@@ -1,0 +1,8 @@
+<h2> <%= @mountain.name %></h2>
+<p>Locaation: <%= @mountain.country %></p>
+<p>Ocean height: <%= @mountain.oceanheight %></p>
+<p>First year climbed: <%= @mountain.ascent %></p>
+<p><%= image_tag( @mountain.image, :class => 'thumb' ) if @mountain.image %></p>
+
+
+<p><%= link_to('Edit', mountain_edit_path(@mountain.id)) %></p>

@@ -1,0 +1,131 @@
+require 'pry'
+require 'pry-debugger'
+
+require_relative 'animal'
+require_relative 'client'
+require_relative 'shelter'
+# require_relative 'relationships'
+
+def main_menu
+p "Would you like to (da)display all animals, (dc)display all clients, (ca)create and animal, (cc)create a client, (p)put an animal up for adoption or (a)adopt an animal?"
+gets.chomp.downcase
+end
+
+shelter = Shelter.new
+animals = @animals
+
+def display_animals
+  $shelter.animals.each do |animal|
+      puts animal
+
+end
+end
+
+# def display_clients
+#   p shelter.client
+# end
+
+def create_animal
+  p "What is your pets name?"
+  @name = gets.chomp
+  p "How old is your pet?"
+  @age = gets.chomp
+  p "Is your pet male or female?"
+  @gender = gets.chomp.to_sym
+  p "what kind of animal do you have?"
+  @species = gets.chomp.to_sym
+  p "What toys does your pet have?"
+  @toys = gets.chomp.split(',')
+  Animal.new(@name, @age, @gender, @species, @toys)
+  # Shelter.animals << Animal.new(@name, @age, @gender, @species, @toys)
+  p "Your pet has been stored in our sysystem, thank you"
+
+end
+
+
+
+
+def create_client
+  p "What is your name?"
+  @name = gets.chomp
+  p "How many children do you have?"
+  @children = gets.chomp
+  p "How old are you?"
+  @age = gets.chomp.to_sym
+  p "How many pets do you have?"
+  @pets = gets.chomp.to_sym
+  Client.new(@name, @children, @age, @pets)
+end
+
+
+
+def dump_pet
+  p "What is the name of your pet"
+  dumped = gets.chomp
+  p "What is your pets name?"
+  name = gets.chomp
+  p "How old is your pet?"
+  age = gets.chomp
+  p "Is your pet male or female?"
+  gender = gets.chomp.to_sym
+  p "what kind of animal do you have?"
+  species = gets.chomp.to_sym
+  p "What toys does your pet have?"
+  toys = gets.chomp.split(',')
+  p "Your pet has been stored in our sysystem, thank you"
+end
+
+Animal.new('Bill', 22, :male, :cat, 'Balls')
+
+#   if shelter.animal.include?(dumped)
+#     shelter.animal.pop(dumped)
+#     p "Congrats you dumped your pet"
+#   else
+#     "You don't even own that pet."
+#   end
+
+#   def adopt_pet
+#     p shelter.animal
+#     p "What is the name of the pet you want to adopt?"
+#     adopted = gets.chomp
+#   if shelter.animal.include?(adopted)
+#     shelter.animal.pop(adopted)
+#     shelter.adopted_animal << adopted
+#     p "Congrats you adopted this pet"
+#   else
+#     "You don't even own that pet."
+#   end
+# end
+
+response = main_menu
+while response != 'q'
+  case response
+    when 'da' then display_animals
+    when 'dc' then display_clients
+    when 'ca' then create_animal
+    when 'cc' then create_client
+    when 'p' then dump_pet
+    when 'a' then
+    else
+      puts "?"
+      gets
+  end
+  response = main_menu
+end
+# def apotion
+#   p "What kind of animal would you like to adopt?"
+#   adopt_type = gets.chomp
+#   p "put list of animal here"
+#   p "Which pet would you like to adopt?"
+#   adopt_choice = gets.chomp
+#   choosing = adopt_choice.include?(adopt_type)
+
+
+#   user_name = gets.chomp
+#   user_name = Client.new(@name, @children, @age, @pets)
+# end
+
+
+binding.pry
+
+

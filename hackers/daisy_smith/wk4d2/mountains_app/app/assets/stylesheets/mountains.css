@@ -1,0 +1,276 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:100);
+
+#container{
+  max-width: 100%;
+  position: relative;
+  /*background-image: url('/assets/background.jpg');*/
+}
+
+.overlay{
+  background: rgba(255,255,255, 0.7);
+}
+
+body{
+}
+
+::selection {
+background: #E8C53A;
+color: #FFF;
+}
+
+h1{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+}
+
+h2{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+}
+
+p{
+  font-family: 'Roboto', sans-serif;
+}
+
+p a{
+    color: #000;
+  text-decoration: none;
+  font-size: 2em;
+  font-family: 'Roboto', sans-serif;
+  color: #000;
+}
+p a:hover{
+  color: #E8C53A;
+}
+
+/* /////////////////////////////////// header //////////////////*/
+.logo{
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+.logo img{
+  width: 100%;
+}
+
+header{
+  margin-top: 5%;
+  padding-top: 5%;
+  padding-bottom: 1%;
+  height: auto;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+nav{
+    margin-left: 33%;
+    margin-right: 32%;
+}
+
+nav ul{
+  margin: 0;
+  padding-left: 0;
+  text-transform: uppercase;
+}
+
+nav li{
+  display: inline-block;
+  list-style: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+  padding-right: 1%;
+}
+
+nav a{
+  color: #000;
+  text-decoration: none;
+}
+
+nav a:hover{
+  color: #000;
+  background-color: #E8C53A;
+}
+/* /////////////////////////////////// subnav //////////////////*/
+#subnav{
+    margin-left: 83%;
+}
+
+#subnav ul{
+  margin: 0;
+  padding-left: 0;
+  text-transform: uppercase;
+}
+
+#subnav li{
+  display: inline-block;
+  list-style: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  padding-right: 1%;
+}
+
+#subnav a{
+  color: #000;
+  text-decoration: none;
+}
+
+#subnav a:hover{
+  color: #E8C53A;
+}
+
+.line{
+  background-color: #000;
+  width: 100%;
+  padding-top: 0.2%;
+}
+
+/* /////////////////////////////////// content //////////////////*/
+
+.homeimage{
+  width: 100%;
+}
+
+#content{
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  position: relative;
+  margin-top: 5%;
+
+
+}
+
+.buttond {
+  background-color: #F2CF66;
+  border-bottom: 5px solid #D1B358;
+  text-shadow: 0px -2px #D1B358;
+    position: relative;
+  padding: 5px 20px;
+  margin: 0px 5px 5px 0px;
+  border-radius: 5px;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.3em;
+  color: #FFF;
+  height: auto;
+  text-decoration: none;
+}
+
+/* /////////////////////////////////// form //////////////////*/
+
+input{
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  width: 50%;
+  height: 30px;
+}
+
+input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #ffcb39;
+  font-size: 1em;
+}
+
+button{
+  background-color: #F2CF66;
+  border-bottom: 5px solid #D1B358;
+  text-shadow: 0px -2px #D1B358;
+    position: relative;
+  padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  border-radius: 10px;
+  font-family: 'Pacifico', cursive;
+  font-size: 25px;
+  color: #FFF;
+  text-decoration: none;
+}
+
+/* /////////////////////////////////// results //////////////////*/
+#results{
+  width: 100%;
+
+}
+
+#results .mountain {
+  display: inline-block;
+  max-width: 30%;
+  padding-right: 3%;
+}
+
+#results .mountain img{
+  width: 100%;
+}
+
+#results a{
+  font-size: 2em;
+  font-family: 'Roboto', sans-serif;
+  color: #000;
+
+}
+
+/* /////////////////////////////////// about //////////////////*/
+
+#about{
+  width: 100%;
+  display: inline-block;
+}
+
+#about h2{
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+#about img{
+  display: inline-block;
+}
+
+#abouttext{
+  width: 60%;
+  display: inline-block;
+  padding-left: 4%;
+}
+/* /////////////////////////////////// footer //////////////////*/
+
+
+footer{
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  position: relative;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.social{
+}
+
+.circle-text:hover{
+    background: #000;
+}
+
+.circle-text img {
+  width: 100%;
+margin-top: 12px;
+padding: 2%;
+}
+
+.circle-text {
+  width: 5%;
+margin-top: 12px;
+padding: 2%;
+    background: #E6E7ED;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    text-align:center;
+    padding: 2%;
+    display: inline-block;
+    margin-left: 90%;
+}
+

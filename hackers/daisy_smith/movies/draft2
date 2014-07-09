@@ -1,0 +1,32 @@
+get '/results' do
+  @title = params[:title].capitalize
+  @title.gsub!(/ /,"+")
+  url = "http://omdbapi.com/?s=#{ @search }"
+    erb :search
+end
+  if @movies["Search"].count == 1
+    redirect 'http://omdbapi.com/?t=#{ @title }'
+  end
+  response = HTTParty.get(url)
+  @movie = JSON.parse response
+  @mtitle = @movie['Title']
+  @actors = @movie['Actors']
+  @poster = @movie['Poster']
+  @year = @movie['Year']
+  @plot = @movie['Plot']
+  if @title == "" then
+    @title = "Movie not found!"
+  end
+  erb :movie
+end
+
+  @mtitle = @movie['Title']
+  @actors = @movie['Actors']
+  @poster = @movie['Poster']
+  @year = @movie['Year']
+  @plot = @movie['Plot']
+  if @title == "" then
+    @title = "Movie not found!"
+  end
+  erb :search
+end

@@ -1,0 +1,90 @@
+/*==================================== CONTAINER STYLE =====================*/
+
+#container{
+  border: 1px solid green;
+  max-width: 960px;
+  margin: auto;
+  border-radius: 1em;
+  padding: 1em;
+  background-color: grey;
+}
+
+
+/*==================================== HEADER STYLE =====================*/
+
+
+/*==================================== NAV STYLE =====================*/
+nav ul{
+  padding: 0;
+}
+
+nav ul li{
+  display: inline;
+  list-style: none;
+}
+
+nav a{
+  color: grey;
+  text-decoration: none;
+}
+
+
+nav a:hover{
+  border-radius: 100px;
+  border-width: 5em;
+  border-color: #000;
+
+}
+
+
+/*==================================== FOOTER MAIN =====================*/
+.main, .sidebar{
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+.main{
+  border: 1px solid green;
+  width: 74%;
+  background-color: #fff;
+  border-radius: 1em;
+  padding: 1em;
+  background-color: grey;
+}
+
+
+.sidebar{
+  border: 1px solid pink;
+  width: 25%;
+  border-radius: 1em;
+  padding: 1em;
+  background-color: grey;
+}
+
+@media (max-width: 800px){
+  .main, .sidebar{
+    display: block;
+    width: 100%;
+    background-color: grey;
+  }
+}
+
+
+/*==================================== FOOTER STYLE =====================*/
+
+footer p{
+  text-align: right;
+}
+
+/*==================================== HEADER STYLE =====================*/
+
+nav ul{
+  padding: 0;
+}
+
+nav ul li{
+  display: inline;
+  list-style: none;
+}
+

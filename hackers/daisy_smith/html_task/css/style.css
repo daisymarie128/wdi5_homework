@@ -1,0 +1,23 @@
+body{
+  background-color: green;
+}
+
+p{
+  font-style: italic;
+}
+
+.warning{
+  color: red;
+}
+
+#header{
+  text-decoration: none;
+}
+
+.intro{
+  background-color: blue;
+}
+
+.desc{
+  color: #fff;
+}

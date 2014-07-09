@@ -1,0 +1,14 @@
+<h2><%= @artist.name %></h2>
+<ul>
+  <li><%= image_tag(@artist.image, :class => 'medium') %></li>
+  <li><%= @artist.nationality %></li>
+  <li><%= @artist.dob.strftime('%B %d %Y') if @artist.dob %></li>
+  <li><%= @artist.period %></li>
+</ul>
+
+<% @artist.works.each do |work| %>
+  <div class="works">
+    <%= image_tag(work.image) %>
+    <%= link_to(work.title, work) %>
+  </div><!--////////close works/////-->
+  <% end %>

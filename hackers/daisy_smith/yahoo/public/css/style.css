@@ -1,0 +1,20 @@
+body {
+  background-color :pink;
+}
+
+nav {
+  text-align: left;
+}
+
+nav a{
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+}
+
+::selection {
+background: #7BC794;
+color: #FFF;
+}
