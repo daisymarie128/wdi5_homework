@@ -1,0 +1,15 @@
+
+
+<div id="block"></div>
+
+<div class="single">
+
+  <img src="<%= @donater.image %>">
+  <h1><%= @donater.name %></h1>
+<p>Location: <%= @donater.location %></p>
+    <p>
+      <a href="/donaters/<%= @donater.id %>/edit">Edit</a>
+      <a href="/donaters/<%= @donater.id %>/delete">Delete</a>
+    </p>
+</div>
+

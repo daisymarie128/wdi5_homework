@@ -1,0 +1,12 @@
+<h2>DONATORS</h2>
+<% @donaters.each do |donaters| %>
+
+  <div class="donaters">
+      <img src="<%= donaters.image %>">
+        <h3>
+          <a href="/donaters/<%= donaters.id %>">
+            <%= donaters.name %>
+          </a>
+        </h3>
+  </div><!--/////////////////////////////////close class donaters ///-->
+  <% end %>

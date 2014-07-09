@@ -1,0 +1,9 @@
+<h1><%= @supporter.name %></h1>
+<p>Location: <%= @supporter.location %></p>
+
+<div class="single">"<%= @supporter.image %>"</div>
+
+<p>
+  <a href="/supporters/<%= @supporter.id %>/edit">Edit</a>
+  <a href="/supporters/<%= @supporter.id %>/delete">Delete</a>
+</p>

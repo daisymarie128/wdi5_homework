@@ -1,0 +1,10 @@
+<h1><%= @video['title'] %></h1>
+<p>Genre: <%= @video['genre'] %></p>
+<p><%= @video['description'] %></p>
+
+<div class="single">"<%= @video['url'] %>"</div>
+
+<p>
+  <a href="/videos/<%= @video['id'] %>/edit">Edit</a>
+  <a href="/videos/<%= @video['id'] %>/delete">Delete</a>
+</p>

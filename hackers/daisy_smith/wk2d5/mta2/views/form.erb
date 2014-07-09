@@ -12,8 +12,8 @@
 
   <label for="station1">What Station are you at?
       <select name="station1">
-        <% "Times_Square 34th 28th N23rd Union_Square N8th L8th 6th 3rd 1st Grand_Central 33rd six28th six23rd Astor Place".split.each do |station1| %>
-          <option value="<%= station1.capitalize %>"><%= station1.capitalize.to_s %></option>
+        <% "Times_Square 34th 28th N23rd Union_Square N8th L8th 6th 3rd 1st Grand_Central 33rd six28th six23rd Astor_Place".split.each do |station1| %>
+          <option value="<%= station1 %>"><%= station1.to_s %></option>
         <% end %>
       </select>
     </label>
@@ -28,11 +28,14 @@
 
   <label for="station2">What Station are you going to?
       <select name="station2">
-        <% "Times_Square 34th 28th N23rd Union_Square N8th L8th 6th 3rd 1st Grand_Central 33rd six28th six23rd Astor Place".split.each do |station2| %>
-          <option value="<%= station2.capitalize %>"><%= station2.capitalize %></option>
+        <% "Times_Square 34th 28th N23rd Union_Square N8th L8th 6th 3rd 1st Grand_Central 33rd six28th six23rd Astor_Place".split.each do |station2| %>
+          <option value="<%= station2 %>"><%= station2 %></option>
         <% end %>
       </select>
   </label>
 
   <button type="submit">Submit that shit</button>
 </form>
+
+<%= @result%>
+<%= @names%>

@@ -1,0 +1,23 @@
+<div class="formholder">
+  <h1>EDIT donater</h1>
+<form action="/donaters/<%= @donater.id %>" method="post">
+  <label for="name">Name: </label>
+    <br>
+  <input type="text" id="name" name="name"value="<%= @donater.name %>">>
+    <br>
+    <br>
+  <label for="location">Location: </label>
+  <br>
+  <br>
+  <input type="text" id="location" name="location"value="<%= @donater.location %>">>
+    <br>
+    <br>
+  <label for="image">Image: </label>
+    <br>
+    <br>
+  <input type="text" id="image" name="image"value="<%= @donater.image %>">>
+    <br>
+    <br>
+  <button>EDIT</button>
+</form>
+</div><!--//////close form holder-->

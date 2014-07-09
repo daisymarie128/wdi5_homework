@@ -1,0 +1,20 @@
+<div class="formholder">
+  <h1>EDIT SUPPORTER</h1>
+<form action="/supporters/<%= @supporter.id %>" method="post">
+  <label for="name">Name: </label>
+    <br>
+  <input type="text" id="name" name="name"value="<%= @supporter.name %>">>
+    <br>
+    <br>
+  <label for="location">Location: </label>
+  <input type="text" id="location" name="location"value="<%= @supporter.location %>">>
+    <br>
+    <br>
+  <label for="image">Image: </label>
+    <br>
+  <input type="text" id="image" name="image"value="<%= @supporter.image %>">>
+    <br>
+    <br>
+  <button>Edit Video</button>
+</form>
+</div><!--//////close form holder-->

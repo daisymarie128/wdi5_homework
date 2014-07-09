@@ -1,0 +1,3 @@
+D, [2014-06-19T09:30:34.391104 #2360] DEBUG -- :   [1m[36mDonater Load (27.4ms)[0m  [1mSELECT "donaters".* FROM "donaters"[0m
+D, [2014-06-19T09:30:44.772246 #2360] DEBUG -- :   [1m[35mDonater Load (0.2ms)[0m  SELECT "donaters".* FROM "donaters"
+D, [2014-06-19T09:30:47.001353 #2360] DEBUG -- :   [1m[36mDonater Load (0.3ms)[0m  [1mSELECT  "donaters".* FROM "donaters"  WHERE "donaters"."id" = ? LIMIT 1[0m  [["id", 1]]

@@ -10,11 +10,6 @@ header{
     width: 70%;
 }
 
-::selection {
-background: #E8C53A;
-color: #FFF;
-}
-
 
 #container {
   width: 100%;
@@ -43,10 +38,6 @@ a{
 }
 
 #content a:visited{
-  color: #E8C53A;
-}
-
-#content a:hover{
   color: #E8C53A;
 }
 

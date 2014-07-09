@@ -1,0 +1,13 @@
+
+<% @videos.each do |video| %>
+
+  <div class="video">
+    <h3>
+      <a href="/videos/<%= video['id'] %>">
+        <%= video['title'] %>
+      </a>
+    </h3>
+
+    <div class="gallery">"<%= video['url'] %>"</div>
+  </div><!--/////////////////////////////////close class video ///-->
+  <% end %>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Moviestocks</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="container">
+  <header>
+      <div id="subnav">
+        <ul>
+          <li><a href="/about">about</a></li>
+          <li><a href="/contact">contact</a></li>
+        </ul>
+      </div><!--///////////////////////////////////////////////close subnav//////////////-->
+</nav>
+    <div class="logo"><img src="assets/logo.png">
+    </div>
+    <div class="line"></div><!--///////////////////////////////////////////////close line//////////////-->
+  <nav>
+  <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/moviesearch">Movie Search</a></li>
+  <li><a href="/stocksearch">Stock Search</a></li>
+</ul>
+</nav>
+
+</header><!--///////////////////////////////////////////////close header//////////////-->
+<div id="content">
+<%= yield %>
+
+
+</div><!--///////////////////////////////////////////////close content//////////////-->
+<footer>
+  <div class="line"></div><!--///////////////////////////////////////////////close line//////////////-->
+<div class="social">
+  <div class="circle-text"><a href="twitter.com"><div><img src="assets/twitter-01.png"></div></a></div>
+</footer>
+</div><!--///////////////////////////////////////////////close container//////////////-->
+</body>
+</html>

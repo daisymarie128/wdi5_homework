@@ -1,0 +1,29 @@
+<div class="formholder">
+  <h1>ADD VIDEO</h1>
+<form action="/videos" method="post">
+  <label for="title">Title: </label>
+  <br>
+  <input type="text" id="title" name="title">
+  <br>
+  <br>
+    <label for="description">Description: </label>
+  <input type="text" id="description" name="description">
+  <br>
+  <br>
+
+  <label for="url">Url: </label>
+  <br>
+  <input type="text" id="url" name="url">
+  <br>
+  <label for="genre">Genre: </label>
+  <br>
+  <select name="genre" id="genre">
+    <% %w{Funny Tutorial Design Game News}.each do |genre| %>
+      <option><%= genre %></option>
+    <% end %>
+  </select>
+  <br>
+  <br>
+  <button>Add Video</button>
+</form>
+</div><!--//////close form holder-->

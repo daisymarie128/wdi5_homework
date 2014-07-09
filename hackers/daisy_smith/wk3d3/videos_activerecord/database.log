@@ -1,0 +1,3 @@
+D, [2014-06-18T16:27:48.450743 #1379] DEBUG -- :   [1m[36mVideo Load (1.1ms)[0m  [1mSELECT "videos".* FROM "videos"[0m
+D, [2014-06-18T16:28:20.333989 #1379] DEBUG -- :   [1m[35mVideo Load (0.2ms)[0m  SELECT "videos".* FROM "videos"
+D, [2014-06-18T16:28:33.108541 #1379] DEBUG -- :   [1m[36mVideo Load (0.2ms)[0m  [1mSELECT "videos".* FROM "videos"[0m
