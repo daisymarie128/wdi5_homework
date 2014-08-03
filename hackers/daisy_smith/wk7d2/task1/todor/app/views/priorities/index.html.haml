@@ -1,0 +1,21 @@
+%script
+  = "var priorities = #{ @priorities.to_json }".html_safe;
+%ul#priority-list
+
+
+= form_tag '/priorities', :class => 'invisible', :id => 'priorities' do
+  = label_tag :name
+  = text_field_tag :name
+
+  = label_tag :color
+  = color_field_tag :color
+
+  = label_tag :urgency
+  = number_field_tag :urgency
+
+  = hidden_field_tag :priority_id
+
+  = submit_tag 'Add priority', :id => 'add_priority'
+  = submit_tag 'Update priority', :id => 'update_priority', :class => 'invisible'
+  = button_tag 'Cancel', :id => 'cancel_priority'
+= button_tag 'New priority', :id => 'new_priority'

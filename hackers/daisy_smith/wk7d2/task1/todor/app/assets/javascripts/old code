@@ -1,0 +1,3 @@
+/ %script
+  / - @priorities.each do |priority|
+  /   == priorities.push({ id: parseInt("#{priority.id}"), name: "#{priority.name}", urgency: parseInt("#{priority.urgency}"), color: "#{priority.color}" });
